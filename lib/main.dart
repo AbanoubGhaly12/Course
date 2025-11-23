@@ -3,5 +3,5 @@ import 'package:couse_1/session_5/test_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(home: TestScreen()));
+  runApp(MaterialApp(home: MyApp()));
 }

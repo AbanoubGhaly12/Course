@@ -5,16 +5,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 CircleAvatar(
-                  radius: 50.0,
-                  backgroundImage: AssetImage('images/angela.jpg'),
+                  radius: 200.0,
+                  backgroundImage: AssetImage('images/parrot.png'),
                 ),
                 Text(
                   'Angela Yu',
@@ -75,7 +74,6 @@ class MyApp extends StatelessWidget {
                     ))
               ],
             )),
-      ),
     );
   }
 }
