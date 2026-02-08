@@ -132,7 +132,7 @@ class _RegistrationFormScreenState extends State<RegistrationFormScreen> {
                     if (value == null || value.isEmpty) {
                       return 'Email is required';
                     }
-                    if (!value.contains('@')) {
+                    if (!isValidEmail(value)) {
                       return 'Please enter a valid email';
                     }
                     return null;
@@ -266,5 +266,12 @@ class _RegistrationFormScreenState extends State<RegistrationFormScreen> {
         fillColor: Colors.transparent,
       ),
     );
+  }
+
+  bool isValidEmail(String email) {
+    final emailRegExp = RegExp(
+      r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+",
+    );
+    return emailRegExp.hasMatch(email);
   }
 }
